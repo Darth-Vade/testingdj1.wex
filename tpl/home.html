@@ -1,0 +1,29 @@
+<div ng-controller="HomeCtrl">
+	<div class="home-content" ng-if="!loading">
+		<div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 nopadding main-slider">
+			<slick data="banners" slides-to-show="1" slides-to-scroll="1" settings="slickmainConfig" ng-if="!loading" autoplay="true" autoplaySpeed="4000">
+		        <div class="width100 height902vh" background-image="{{IMGURL}}{{slide.image}}" ng-repeat="(key,slide) in banners"></div>
+		    </slick>
+		</div>
+
+		<div class="row" ng-if="fminfo.show_rj && !is_mobile">
+	         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 nopadding m-b-lg">
+	            <div class="text-center">
+	               <h2 class="ui-title-block">Thedal Radio Jockey(RJ)</h2>
+	               <div class="ui-subtitle-block">&nbsp;</div>
+						<div class="col-sm-1 col-md-1 col-lg-1 col-xs-1 nopadding"></div>
+						<div class="col-sm-10 col-md-10 col-lg-10 col-xs-10 nopadding rjprofile">
+							<slick data="rjprofiles" dots="false"  settings="slickConfig" init-onload="true" ng-if="!loading" autoplay="true" autoplaySpeed="2000">
+						        <div class="width100" ng-repeat="(key,rj) in rjprofiles">
+						        	<img ng-src="{{IMGURL}}{{rj.avatar}}" class="profile-img">
+						        	<h3 class="b-team__name">{{rj.nickname}}</h3>
+	                           		<div class="b-team__description">{{rj.abouthim}}</div>
+						        </div>
+						    </slick>
+						</div>
+						<div class="col-sm-1 col-md-1 col-lg-1 col-xs-1 nopadding"></div>
+					</div>
+	         </div>
+	      </div>
+	  </div>
+</div>
