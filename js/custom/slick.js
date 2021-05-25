@@ -6,7 +6,7 @@ $('.banner-slider').slick({
   dots: false,
   infinite: true,
    
-  speed: 5000,
+  speed: 1000,
   fade: true,
   autoplay: true,
   arrows: false,
