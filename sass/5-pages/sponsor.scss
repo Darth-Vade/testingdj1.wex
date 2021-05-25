@@ -1,0 +1,65 @@
+
+
+
+//========================================
+//          1 - HELPERS FOLDER
+//========================================
+@import "../1-helpers/_mixin.scss";
+
+
+//========================================
+//          2 - COMPONENTS FOLDER
+//========================================
+@import "../2-components/_breadcrumb.scss";
+@import "../2-components/_form.scss";
+
+
+//========================================
+//          4 - LAYOUTS FOLDER
+//========================================
+@import "../4-layouts/_single-banner.scss";
+
+
+/*=====================================
+            SPONSOR PART STYLE
+======================================*/
+.sponsor-part {
+    padding: 100px 0px;
+}
+
+.section-heading {
+    h2 {
+        font-size: 50px;
+        text-transform: uppercase;
+
+        &::before {
+            bottom: -25px;
+        }
+
+        &::after {
+            bottom: -32px;
+        }
+    }
+}
+
+//========================================
+//        RESPONSIVE SPONSOR STYLE
+//========================================
+@media (max-width: 767px) {
+    .sponsor-part {
+        padding: 60px 0px;
+    }
+
+    .section-heading {
+        h2 {
+            font-size: 40px;
+            line-height: 48px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .sponsor-part {
+        padding: 80px 0px;
+    }
+}

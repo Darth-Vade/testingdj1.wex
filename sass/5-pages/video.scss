@@ -1,0 +1,55 @@
+
+
+
+//========================================
+//          1 - HELPERS FOLDER
+//========================================
+@import "../1-helpers/_mixin.scss";
+
+
+//========================================
+//          2 - COMPONENTS FOLDER
+//========================================
+@import "../2-components/_breadcrumb.scss";
+
+
+//========================================
+//          3 - ELEMENTS FOLDER
+//========================================
+@import "../3-elements/_video-card.scss";
+
+
+//========================================
+//          4 - LAYOUTS FOLDER
+//========================================
+@import "../4-layouts/_single-banner.scss";
+
+
+/*=====================================
+            VIDEO PART STYLE
+======================================*/
+.video-part {
+    padding: 100px 0px;
+}
+
+.video-gape {
+    margin-bottom: 30px;
+}
+
+.video-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+// for responsive team part
+@media (max-width: 767px) {
+    .video-part {
+        padding: 60px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:991px) {
+    .video-part {
+        padding: 80px 0px;
+    }
+}

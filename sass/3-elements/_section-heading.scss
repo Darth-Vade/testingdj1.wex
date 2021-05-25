@@ -1,0 +1,63 @@
+
+
+
+/*=====================================
+          SECTION HEADING STYLE
+======================================*/
+.section {
+    padding: 115px 0px 0px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+
+    h2 {
+        background: var(--primary-gdnt);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            border-radius: 30px;
+            background: var(--primary-gdnt);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 2px;
+            border-radius: 30px;
+            background: var(--primary-gdnt);
+        }
+    }
+}
+
+// for section responsive
+@media (max-width: 575px) {
+    .section {
+      padding: 60px 0px 0px;
+    }
+  
+    .section-heading h2 {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 767px) {
+    .section {
+      padding: 80px 0px 0px;
+    }
+  }

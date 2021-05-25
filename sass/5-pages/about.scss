@@ -1,0 +1,300 @@
+
+
+
+//========================================
+//          1 - HELPERS FOLDER
+//========================================
+@import "../1-helpers/_mixin.scss";
+
+
+//========================================
+//          2 - COMPONENTS FOLDER
+//========================================
+@import "../2-components/_breadcrumb.scss";
+@import "../2-components/_slider-arrow.scss";
+
+
+//========================================
+//          3 - ELEMENTS FOLDER
+//========================================
+@import "../3-elements/_testimonial-card.scss";
+
+
+//========================================
+//          4 - LAYOUTS FOLDER
+//========================================
+@import "../4-layouts/_single-banner.scss";
+
+
+/*=====================================
+            ABOUT PART STYLE
+======================================*/
+.about-img {
+    position: relative;
+}
+
+.about-1 {
+    img {
+        width: 75%;
+        border-radius: 50%;
+        box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.about-2 {
+    position: absolute;
+    bottom: 0px;
+    right: 40px;
+    border-radius: 50%;
+    border: 10px solid var(--white);
+    box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.1);
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: var(--about-oly);
+    }
+
+    img {
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+    }
+}
+
+.about-content {
+    margin-left: 50px;
+
+    h2 {
+        margin-bottom: 30px;
+
+        span {
+            font-size: 60px;
+            line-height: 68px;
+            text-transform: uppercase;
+            background: var(--primary-gdnt);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    p {
+        margin-bottom: 25px;
+    }
+
+    h3 {
+        position: relative;
+        margin-left: 50px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: -50px;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 3px;
+            border-radius: 30px;
+            background: var(--primary-gdnt);
+        }
+    }
+}
+
+// for about responsive
+@media (max-width: 1199px) {
+    .about-2 {
+        right: 0px;
+    }
+} 
+
+@media (max-width: 575px) {
+
+    .about-img {
+        width: 290px;
+        margin: 0 auto 30px;
+    }
+
+    .about-1 {
+        img {
+            width: 80%;
+        }
+    }
+
+    .about-2 {
+        border: 6px solid var(--white);
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .about-content {
+        margin-left: 0px;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+
+    .about-content h2 span {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .about-content h3 {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    
+    .about-img {
+        width: 500px;
+        margin: 0 auto 30px;
+    }
+
+    .about-content {
+        margin-left: 0px;
+    }
+}
+
+/*=====================================
+            COUNTER PART STYLE
+======================================*/
+.counter-part {
+    background: url(../../img/counter-bg.jpg);
+    @include background__property;
+    margin: 110px 0px 0px;
+}
+
+.counter-oly {
+    background: var(--counter-oly);
+    padding: 100px 0px 92px;
+}
+
+.counter-div {
+    text-align: center;
+
+    h3 {
+        font-size: 50px;
+        font-weight: var(--bcweight);
+        color: var(--white);
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--white);
+        width: 180px;
+        margin: 0 auto;
+    }
+}
+
+// for responsive counter part
+@media (max-width: 991px) {
+    .counter-part {
+        margin: 60px 0px 0px;
+    }
+
+    .counter-oly {
+        padding: 60px 0px 10px;
+    }
+
+    .counter-div {
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .counter-part {
+        margin: 80px 0px 0px;
+    }
+
+    .counter-oly {
+        padding: 80px 0px 20px;
+    }
+}
+
+/*=====================================
+            SPONSOR PART STYLE
+======================================*/
+.sponsor-slider {
+    a {
+        margin: 0px 15px;
+
+        img {
+            width: 100%;
+            @include cursor__transition;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+// for responsive sponsor logo
+@media (max-width: 991px) {
+    .sponsor-slider {
+        a {
+            margin: 0px 8px;
+        }
+    }
+}
+
+/*=====================================
+            INTRO PART STYLE
+======================================*/
+.intro-part {
+    padding: 110px 0px 120px;
+}
+
+.intro-content {
+    text-align: center;
+
+    h1 {
+        color: var(--heading);
+        text-shadow: none;
+        margin-bottom: 12px;
+    }
+
+    p {
+        width: 500px;
+        font-size: 18px;
+        margin: 0 auto 45px;
+    }
+}
+
+// for responive intro part
+@media (max-width: 767px) {
+    .intro-part {
+        padding: 60px 0px;
+    }
+
+    .intro-content {
+        h1 {
+            font-size: 38px;
+            line-height: 46px;
+        }
+
+        p {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .intro-part {
+        padding: 80px 0px;
+    }
+}

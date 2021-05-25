@@ -1,0 +1,40 @@
+
+
+
+/*=====================================
+            HEADER PART STYLE
+======================================*/
+.header-bg {
+    background: url(../..//img/assets-bg.png);
+    @include background__property;
+    padding: 25px 0px 0px;
+}
+
+.header-logo {
+    img {
+        width: 220px;
+    }
+}
+
+.header-content {
+    text-align: center;
+    margin-top: 18px;
+
+    h3 {
+        font-size: 28px;
+    }
+}
+
+.header-btn {
+    text-align: right;
+    margin-top: 6px;
+}
+
+/*=====================================
+          HEADER RESPOSIVE STYLE
+======================================*/
+@media (max-width: 991px) {
+    .header-part {
+        display: none;
+    }
+}

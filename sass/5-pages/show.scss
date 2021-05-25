@@ -1,0 +1,89 @@
+
+
+
+//========================================
+//          1 - HELPERS FOLDER
+//========================================
+@import "../1-helpers/_mixin.scss";
+
+
+//========================================
+//          2 - COMPONENTS FOLDER
+//========================================
+@import "../2-components/_breadcrumb.scss";
+@import "../2-components/_nav-tabs.scss";
+
+
+//========================================
+//          3 - ELEMENTS FOLDER
+//========================================
+@import "../3-elements/_show-card.scss";
+
+
+//========================================
+//          4 - LAYOUTS FOLDER
+//========================================
+@import "../4-layouts/_single-banner.scss";
+
+
+/*=====================================
+        SHOW SCHEDULE PART STYLE
+======================================*/
+.show-part {
+    padding: 100px 0px;
+}
+
+.show-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+// for responsive show part
+@media (max-width: 767px) {
+    .show-part {
+        padding: 60px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:991px) {
+    .show-part {
+        padding: 80px 0px;
+    }
+}
+
+@media (max-width: 991px) {
+    #show-menu {
+        overflow-x: scroll;
+    }
+  
+    .nav {
+        width: 800px;
+    }
+  
+    .nav-tabs li .nav-link {
+        padding: 8px 0px;
+    }
+    
+    #show-menu::-webkit-scrollbar {
+        width: 12px;
+        background-color: var(--white);
+    }
+    
+    #show-menu::-webkit-scrollbar-thumb {
+        border-radius: 30px;
+        background: #aaaaaa;
+        border: 5px solid var(--light-white);
+    }
+}
+  
+@media (min-width: 351px) and (max-width: 575px) {
+    .show-part .container {
+        max-width: 350px;
+    }
+}
+  
+@media (min-width: 768px) and (max-width: 1199px) {
+    .show-host li a img {
+        width: 55px;
+    }
+}

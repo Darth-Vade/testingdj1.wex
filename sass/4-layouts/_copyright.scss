@@ -1,0 +1,49 @@
+
+
+
+/*=====================================
+          COPYRIGHT PART STYLE
+======================================*/
+.copy-part {
+    background:  var(--deep-heading);
+    padding: 15px 0px;
+}
+
+.copy-part ul {
+    @include flex__center;
+
+    li {
+        padding: 0px 30px;
+        border-right: 1px solid var(--text);
+
+        &:last-child {
+            border-right: none;
+        }
+
+        h6 {
+            a {
+                color: var(--light-secondary);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            span {
+                color: var(--light-secondary);
+            }
+        }
+    }
+}
+
+// for copyright responsive
+@media (max-width: 575px) {
+    .copy-part ul {
+      flex-direction: column;
+    }
+    
+    .copy-part ul li {
+      border: none;
+      padding: 6px 0px;
+    }
+  }
