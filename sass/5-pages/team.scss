@@ -1,0 +1,71 @@
+
+
+
+
+//========================================
+//          1 - HELPERS FOLDER
+//========================================
+@import "../1-helpers/_mixin.scss";
+
+
+//========================================
+//          2 - COMPONENTS FOLDER
+//========================================
+@import "../2-components/_breadcrumb.scss";
+@import "../2-components/_nav-tabs.scss";
+
+
+//========================================
+//          3 - ELEMENTS FOLDER
+//========================================
+@import "../3-elements/_team-card.scss";
+
+
+//========================================
+//          4 - LAYOUTS FOLDER
+//========================================
+@import "../4-layouts/_single-banner.scss";
+
+
+/*=====================================
+            TEAM PART STYLE
+======================================*/
+.team-part {
+    padding: 100px 0px;
+}
+
+.team-gape {
+    margin-bottom: 30px;
+}
+
+.team-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+// for responsive team part
+@media (max-width: 575px) {
+    .team-part {
+        .col-6 {
+            padding: 0px 5px;
+        }
+    }
+
+    .team-icon .icon i {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .team-part {
+        padding: 60px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:991px) {
+    .team-part {
+        padding: 80px 0px;
+    }
+}

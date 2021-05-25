@@ -1,0 +1,106 @@
+
+
+
+//========================================
+//          1 - HELPERS FOLDER
+//========================================
+@import "../1-helpers/_mixin.scss";
+
+
+//========================================
+//          2 - COMPONENTS FOLDER
+//========================================
+@import "../2-components/_breadcrumb.scss";
+@import "../2-components/_pagination.scss";
+
+
+//========================================
+//          4 - ELEMENTS FOLDER
+//========================================
+@import "../3-elements/_blog-filter.scss";
+@import "../3-elements/_blog-card.scss";
+
+
+//========================================
+//          4 - LAYOUTS FOLDER
+//========================================
+@import "../4-layouts/_single-banner.scss";
+
+
+/*=====================================
+            BLOG LIST PART STYLE
+======================================*/
+.blog-part {
+    padding: 100px 0px;
+}
+
+.blog-card {
+    margin-bottom: 30px;
+}
+
+.pagination {
+    margin-top: 30px;
+}
+
+// for responsive blog list
+@media (max-width: 991px) {
+    .content-reverse {
+        flex-direction: column-reverse;
+    } 
+
+    .pagination {
+        margin: 20px 0px 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .blog-part {
+        padding: 60px 0px;
+    }
+}
+
+@media (min-width: 380px) and (max-width: 575px) {
+    .blog-card {
+        width: 380px;
+        margin: 0px auto 30px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .content-reverse {
+        .col-sm-6 {
+            padding: 0px 8px;
+        }
+    }
+
+    .blog-overlay {
+        h3 {
+            font-size: 21px;
+            line-height: 27px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .blog-part {
+        padding: 80px 0px;
+    }
+
+    .blog-ad {
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .suggest-img {
+        a {
+            img {
+                width: 95px;
+            }
+        }
+    }
+
+    .blog-ad {
+        display: none;
+    }
+}

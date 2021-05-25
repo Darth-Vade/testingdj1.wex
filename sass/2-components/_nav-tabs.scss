@@ -1,0 +1,51 @@
+
+
+
+/*=====================================
+          NAV-TABS BUTTON STYLE
+======================================*/
+.nav {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-tabs {
+    li {
+        width: 100%;
+
+        .nav-link {
+            width: 100%;
+            border: none;
+            padding: 10px 0px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text);
+            border-bottom: 3px solid transparent;
+            text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                border-color: transparent;
+            }
+        }
+
+        .active {
+            color: var(--white) !important;
+            background: var(--primary-gdnt);
+            border-color: var(--primary) !important;
+        }
+    }
+}
+
+.tab-pane {
+    padding: 30px 0px 0px;
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}

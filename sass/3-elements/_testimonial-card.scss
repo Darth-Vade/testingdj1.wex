@@ -1,0 +1,96 @@
+
+
+
+
+/*=====================================
+          TESTIMONIAL CARD STYLE
+======================================*/
+.testi-card {
+    background: var(--light-white);
+    padding: 45px 45px;
+    border-radius: 10px;
+    margin: 0px 15px;
+}
+
+.testi-quote {
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+
+    p {
+        font-size: 20px;
+    }
+}
+
+.testi-meta {
+    @include flex__center;
+    justify-content: flex-start;
+}
+
+.testi-img {
+    margin-right: 18px;
+
+    a {
+        border-radius: 50%;
+        border: 2px solid var(--primary);
+        box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.15);
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--white);
+        }
+    }
+}
+
+.testi-info {
+    h4 {
+        text-transform: capitalize;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+// for responsive testimonial card
+@media (max-width: 1199px) {
+    .testi-meta {
+        flex-direction: column;
+    }
+
+    .testi-quote {
+        text-align: center;
+    }
+
+    .testi-img {
+        margin: 0px;
+    }
+
+    .testi-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .testi-card {
+        padding: 35px;
+    }
+}
+
+@media (max-width: 767px) {
+    .testi-card {
+        width: 260px;
+        margin: 0px 8px;
+    }
+
+    .testi-quote {
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+
+
